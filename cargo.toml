@@ -1,0 +1,10 @@
+[package]
+name = "riscv-cli-decoder"
+version = "0.0.0"
+authors = ["Marnix Wieffering <git@marnixwieffering.dev>"]
+edition = "2018"
+default-run = "riscv-cli-decoder"
+
+[dependencies]
+riscv-decode = "0.2.0"
+clap = "2.33.3"
