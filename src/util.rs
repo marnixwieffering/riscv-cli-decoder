@@ -26,7 +26,7 @@ fn print_i_type(instruction: Instruction, itype: IType) {
 fn print_s_type(instruction: Instruction, stype: SType) {
 	print!("Instruction = {:?}\n", instruction);
 	print!("Register 1 = {:?}\n", stype.rs1());
-	print!("Register 1 = {:?}\n", stype.rs2());
+	print!("Register 2 = {:?}\n", stype.rs2());
 	print!("Immediate = {:?}\n", stype.imm());
 }
 
