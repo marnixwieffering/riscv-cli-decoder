@@ -3,38 +3,53 @@ use riscv_decode::{
 	Instruction,
 };
 
-fn print_u_type(instruction: Instruction, utype: UType) {
-	print!("Instruction = {:?}\n", instruction);
-	print!("Immediate = {:?}\n", utype.imm());
-	print!("Destination register = {:?}\n", utype.rd());
+fn print_u_type(instruction: Instruction, u_type: UType) {
+	print!(
+		"Instruction = {:?}\n Immediate = {:?}\n Destination register = {:?}\n",
+		instruction,
+		u_type.imm(),
+		u_type.rd()
+	);
 }
 
-fn print_r_type(instruction: Instruction, rtype: RType) {
-	print!("Instruction = {:?}\n", instruction);
-	print!("Register 1 = {:?}\n", rtype.rs1());
-	print!("Register 2 = {:?}\n", rtype.rs2());
-	print!("Destination register = {:?}\n", rtype.rd());
+fn print_r_type(instruction: Instruction, r_type: RType) {
+	print!(
+		"Instruction = {:?}\nRegister 1 = {:?}\nRegister 2 = {:?}\nDestination register = {:?}\n",
+		instruction,
+		r_type.rs1(),
+		r_type.rs2(),
+		r_type.rd()
+	);
 }
 
-fn print_i_type(instruction: Instruction, itype: IType) {
-	print!("Instruction = {:?}\n", instruction);
-	print!("Register 1 = {:?}\n", itype.rs1());
-	print!("Immediate = {:?}\n", itype.imm());
-	print!("Destination register = {:?}\n", itype.rd());
+fn print_i_type(instruction: Instruction, i_type: IType) {
+	print!(
+		"Instruction = {:?}\nRegister 1 = {:?}\nImmediate = {:?}\nDestination register = {:?}\n",
+		instruction,
+		i_type.rs1(),
+		i_type.imm(),
+		i_type.rd()
+	);
 }
 
-fn print_s_type(instruction: Instruction, stype: SType) {
-	print!("Instruction = {:?}\n", instruction);
-	print!("Register 1 = {:?}\n", stype.rs1());
-	print!("Register 2 = {:?}\n", stype.rs2());
-	print!("Immediate = {:?}\n", stype.imm());
+fn print_s_type(instruction: Instruction, s_type: SType) {
+	print!(
+		"Instruction = {:?}\nRegister 1 = {:?}\nRegister 2 = {:?}\nImmediate = {:?}\n",
+		instruction,
+		s_type.rs1(),
+		s_type.rs2(),
+		s_type.imm()
+	);
 }
 
-fn print_sh_type(instruction: Instruction, stype: ShiftType) {
-	print!("Instruction = {:?}\n", instruction);
-	print!("Register 1 = {:?}\n", stype.rs1());
-	print!("Destination register = {:?}\n", stype.rd());
-	print!("shamt = {:?}\n", stype.shamt());
+fn print_sh_type(instruction: Instruction, s_type: ShiftType) {
+	print!(
+		"Instruction = {:?}\nRegister 1 = {:?}\nDestination register = {:?}\nshamt = {:?}\n",
+		instruction,
+		s_type.rs1(),
+		s_type.rd(),
+		s_type.shamt()
+	);
 }
 
 pub fn print(instruction: Instruction) {

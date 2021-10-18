@@ -7,4 +7,3 @@ default-run = "riscv-cli-decoder"
 
 [dependencies]
 riscv-decode = "0.2.0"
-clap = "2.33.3"
